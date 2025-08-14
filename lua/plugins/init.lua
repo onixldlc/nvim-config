@@ -1,6 +1,23 @@
 -- All plugins have lazy=true by default,to load a plugin on startup just lazy=false
 -- List of all default plugins & their definitions
+--
 local default_plugins = {
+  {
+    "github/copilot.vim",
+    cmd = "Copilot",
+    lazy = false,
+  },
+
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("copilot").setup({
+  --       copilot_model = ""
+  --     })
+  --
+  -- },
 
   "nvim-lua/plenary.nvim",
 
