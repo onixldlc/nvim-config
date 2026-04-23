@@ -8,14 +8,19 @@ M.base_30 = {
   darker_black = "#242933",
   black = "#2E3440",
   black2 = "#343a46",
-  statusline_bg = "#3B4252",
-  lightbg = "#3B4252",
+  statusline_bg = "#333945",
+  lightbg = "#3F4551",
 
   -- CATPPUCCIN: everything else
   one_bg = "#2d2c3c",
   one_bg2 = "#363545",
   one_bg3 = "#3e3d4d",
-  grey = "#474656",
+  
+  -- catpuccin grey:
+  -- grey = "#474656",
+  -- nord grey:
+  grey = "#4B515D",
+  
   grey_fg = "#4e4d5d",
   grey_fg2 = "#555464",
   light_grey = "#605f6f",
