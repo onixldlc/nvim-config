@@ -224,6 +224,14 @@ local default_plugins = {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
     init = function()
+      -- load nvim-tree early when neovim is opened with a directory argument
+      -- so that hijack_netrw / disable_netrw take effect
+      if vim.fn.argc(-1) == 1 then
+        local stat = vim.uv.fs_stat(vim.fn.argv(0))
+        if stat and stat.type == "directory" then
+          require "nvim-tree"
+        end
+      end
       require("core.utils").load_mappings "nvimtree"
     end,
     opts = function()
