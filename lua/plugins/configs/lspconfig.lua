@@ -1,5 +1,30 @@
 dofile(vim.g.base46_cache .. "lsp")
-require "nvchad.lsp"
+
+-- Replaces deprecated require "nvchad.lsp" (used vim.lsp.with removed in 0.12)
+local function lspSymbol(name, icon)
+  local hl = "DiagnosticSign" .. name
+  vim.fn.sign_define(hl, { text = icon, numhl = hl, texthl = hl })
+end
+
+lspSymbol("Error", "󰅙")
+lspSymbol("Info", "󰋼")
+lspSymbol("Hint", "󰌵")
+lspSymbol("Warn", "")
+
+vim.diagnostic.config {
+  virtual_text = { prefix = "" },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+}
+
+vim.lsp.handlers["textDocument/hover"] = function(err, result, ctx, config)
+  return vim.lsp.handlers.hover(err, result, ctx, vim.tbl_extend("force", config or {}, { border = "single" }))
+end
+
+vim.lsp.handlers["textDocument/signatureHelp"] = function(err, result, ctx, config)
+  return vim.lsp.handlers.signature_help(err, result, ctx, vim.tbl_extend("force", config or {}, { border = "single", focusable = false, relative = "cursor" }))
+end
 
 local M = {}
 local utils = require "core.utils"
