@@ -10,6 +10,7 @@ M.base_30 = {
   black2 = "#343a46",
   statusline_bg = "#333945",
   lightbg = "#3F4551",
+  line = "#414753", -- for lines like vertsplit
 
   -- CATPPUCCIN: everything else
   one_bg = "#2d2c3c",
@@ -27,7 +28,7 @@ M.base_30 = {
   red = "#F38BA8",
   baby_pink = "#ffa5c3",
   pink = "#F5C2E7",
-  line = "#383747",
+  -- line = "#383747", -- for lines like vertsplit
   green = "#ABE9B3",
   vibrant_green = "#b6f4be",
   nord_blue = "#8bc2f0",
