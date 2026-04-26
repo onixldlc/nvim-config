@@ -15,7 +15,7 @@ M.base_30 = {
   one_bg = "#2d2c3c",
   one_bg2 = "#363545",
   one_bg3 = "#3e3d4d",
-  
+
   -- catpuccin grey:
   -- grey = "#474656",
   -- nord grey:
@@ -47,13 +47,14 @@ M.base_30 = {
 M.base_16 = {
   -- NORD: bg + fg
   base00 = "#2E3440",
+  base02 = "#434C5E",
   base04 = "#D8DEE9",
   base05 = "#E5E9F0",
   base06 = "#ECEFF4",
   base07 = "#8FBCBB",
   -- CATPPUCCIN: rest
   base01 = "#282737",
-  base02 = "#2f2e3e",
+  -- base02 = "#2f2e3e",
   base03 = "#383747",
   base08 = "#F38BA8",
   base09 = "#F8BD96",
